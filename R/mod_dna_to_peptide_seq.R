@@ -45,9 +45,20 @@ mod_dna_to_peptide_seq_server <- function(id){
         height = 100,
         width = 600)})
     observeEvent(input$generate_dna, {
-      dna(
-        centralDogma::random_dna(input$dna_length)
-      )
+      dna(centralDogma::random_dna(input$dna_length))})
+    output$peptide <- renderText({
+      # Ensure input is not NULL and is longer than 2 characters
+      if(is.null(input$DNA)){
+        NULL
+      } else if(nchar(input$DNA) < 3){
+        NULL
+      } else{
+        input$DNA %>%
+          toupper() %>%
+          centralDogma::transcribe() %>%
+          centralDogma::codon_split() %>%
+          centralDogma::translate()
+      }
     })
 
   })
