@@ -9,3 +9,5 @@ $run_dev.*
 ^centraldogapp\.Rcheck$
 ^centraldogapp.*\.tar\.gz$
 ^centraldogapp.*\.tgz$
+^app\.R$
+^rsconnect$

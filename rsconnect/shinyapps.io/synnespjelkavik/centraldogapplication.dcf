@@ -1,0 +1,13 @@
+name: centraldogapplication
+title: centraldogapplication
+username:
+account: synnespjelkavik
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 5950524
+bundleId: 5735074
+url: https://synnespjelkavik.shinyapps.io/centraldogapplication/
+when: 1648472325.74773
+lastSyncTime: 1648472325.74774
+asMultiple: FALSE
+asStatic: FALSE
