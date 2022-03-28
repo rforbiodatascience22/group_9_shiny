@@ -8,7 +8,7 @@ Imports:
     golem (>= 0.3.2),
     magrittr,
     shiny (>= 1.7.1)
-Author@R:c(person(given = "Synne", family = "Spjelkavik", role = c("aut",
+Author@R: c(person(given = "Synne", family = "Spjelkavik", role = c("aut",
     "cre"), email = "s174526@student.dtu.dk"), person(given = "Yu", family
     = "liu", role = "aut", email = "s212610@dtu.dk"), person(given =
     "narong", family = "nuanmuang", role = "aut", email =

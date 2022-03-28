@@ -9,11 +9,18 @@
 #' @importFrom shiny NS tagList
 mod_plot_amino_acid_ui <- function(id){
   ns <- NS(id)
-  tagList(fluidRow(
-    column(8, "DNA_sequence"),
-    column(4, "random_dna_length", "generate_dna_button")
-  ),
-  "peptide_sequence"
+  tagList(sidebarLayout(
+    sidebarPanel(
+      textAreaInput(
+        inputId = ns("peptide"),
+        label = "Peptide sequence",
+        width = 300,
+        height = 100,
+        placeholder = "Insert peptide sequence")),
+    mainPanel(plotOutput(
+      outputId = ns("abundance"))
+    )
+  )
 
   )
 }
@@ -24,6 +31,15 @@ mod_plot_amino_acid_ui <- function(id){
 mod_plot_amino_acid_server <- function(id){
   moduleServer( id, function(input, output, session){
     ns <- session$ns
+    output$abundance <- renderPlot({
+      if(input$peptide == ""){
+        NULL
+      } else{
+        input$peptide %>%
+          centralDogma::plot_abundance() +
+          ggplot2::theme(legend.position = "none")
+      }
+    })
 
   })
 }

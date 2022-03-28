@@ -15,9 +15,7 @@ app_ui <- function(request) {
         tabPanel(title = "plotting_amino_acid",
                  mod_plot_amino_acid_ui("plot_amino_acid_1")),
         tabPanel(title = "panel2",
-                 "module2")
-      )
-
+                 "module2"))
     )
   )
 }
