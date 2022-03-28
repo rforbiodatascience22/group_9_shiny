@@ -34,7 +34,21 @@ mod_dna_to_peptide_seq_ui <- function(id){
 #' @noRd
 mod_dna_to_peptide_seq_server <- function(id){
   moduleServer( id, function(input, output, session){
+    dna <- reactiveVal()
     ns <- session$ns
+    output$DNA <- renderUI({
+      textAreaInput(
+        inputId = ns("DNA"),
+        label = "DNA sequence",
+        placeholder = "Insert DNA sequence",
+        value = dna(),
+        height = 100,
+        width = 600)})
+    observeEvent(input$generate_dna, {
+      dna(
+        centralDogma::random_dna(input$dna_length)
+      )
+    })
 
   })
 }
