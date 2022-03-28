@@ -1,7 +1,19 @@
 Package: centraldogapp
 Title: Central dogma app
 Version: 0.0.0.9000
-Authors@R: person('Synne', 'Spjelkavik', email = 's174526@student.dtu.dk', role = c('cre', 'aut'))
+Author@R:
+  c(person(given = "Synne",
+           family = "Spjelkavik",
+           role = c("aut", "cre"),
+           email = "s174526@student.dtu.dk"), 
+    person(given = "Yu",
+           family = "liu",
+           role = "aut",
+           email = "s212610@dtu.dk"),
+    person(given = "narong",
+           family = "nuanmuang",
+           role = "aut",
+           email = "narnua@food.dtu.dk"))
 Description: Making app. Change this later.
 License: MIT + file LICENSE
 Imports: 
