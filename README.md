@@ -26,7 +26,7 @@ devtools::install_github("rforbiodatascience22/group_9_shiny")
 This is a basic example which shows you how to solve a common problem:
 
 ``` r
-#library(centraldogapp)
+library(centralDogma)
 ## basic example code
 ```
 
