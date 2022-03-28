@@ -12,8 +12,8 @@ app_ui <- function(request) {
     fluidPage(
       h1("centraldogapp"),
       tabsetPanel(
-        tabPanel(title = "panel1",
-                 "module1"),
+        tabPanel(title = "plotting_amino_acid",
+                 mod_plot_amino_acid_ui("plot_amino_acid_1")),
         tabPanel(title = "panel2",
                  "module2")
       )

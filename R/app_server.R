@@ -4,6 +4,7 @@
 #'     DO NOT REMOVE.
 #' @import shiny
 #' @noRd
+#' @importFrom magrittr %>%
 app_server <- function(input, output, session) {
-  # Your application server logic
+  mod_plot_amino_acid_server("plot_amino_acid_1")
 }
