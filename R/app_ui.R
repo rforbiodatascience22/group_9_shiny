@@ -14,8 +14,8 @@ app_ui <- function(request) {
       tabsetPanel(
         tabPanel(title = "plotting_amino_acid",
                  mod_plot_amino_acid_ui("plot_amino_acid_1")),
-        tabPanel(title = "panel2",
-                 "module2"))
+        tabPanel(title = "dna_conv_peptide_seq",
+                 mod_dna_to_peptide_seq_ui("dna_to_peptide_seq_1")))
     )
   )
 }
